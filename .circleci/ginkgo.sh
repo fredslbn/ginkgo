@@ -48,7 +48,7 @@ FINAL_ZIP_ALIAS=Karenulgarde-${TANGGAL}.zip
 ##----------------------------------------------------------##
 # Specify compiler.
 
-COMPILER=clang17-7
+COMPILER=clang17
 
 ##----------------------------------------------------------##
 # Specify Linker
@@ -297,9 +297,9 @@ START=$(date +"%s")
            OBJCOPY=llvm-objcopy \
            OBJDUMP=llvm-objdump \
            STRIP=llvm-strip \
-           READELF=llvm-readelf \
-	       OBJSIZE=llvm-size \
-	       V=$VERBOSE 2>&1 | tee error.log
+           #READELF=llvm-readelf \
+	       #OBJSIZE=llvm-size \
+	       Image.gz-dtb dtbo.img
 	       
 	elif [ -d ${KERNEL_DIR}/cosmic ];
 	   then
