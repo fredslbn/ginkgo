@@ -48,7 +48,7 @@ FINAL_ZIP_ALIAS=Karenulgarde-${TANGGAL}.zip
 ##----------------------------------------------------------##
 # Specify compiler.
 
-COMPILER=cosmic-clang
+COMPILER=clang17
 
 ##----------------------------------------------------------##
 # Specify Linker
@@ -293,6 +293,7 @@ START=$(date +"%s")
            #LLVM=1 \
            #LLVM_IAS=1 \
            AR=llvm-ar \
+           AS=llvm-as \
            NM=llvm-nm \
            OBJCOPY=llvm-objcopy \
            OBJDUMP=llvm-objdump \
